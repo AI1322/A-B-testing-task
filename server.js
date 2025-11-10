@@ -41,8 +41,16 @@ const server = http.createServer((req, res) => {
             try {
                 const andmed = JSON.parse(body);
                 
-                // Formateeri andmed tekstiks
-                const tekst = `Variant: ${andmed.variant}, Klikkide arv: ${andmed.klikkideArv}, Aeg: ${andmed.aeg}\n`;
+                // Formateeri andmed tekstiks (toeta nii test1 kui test2)
+                let tekst = '';
+                
+                if (andmed.test === 'Test2') {
+                    // Testi 2 andmed (toodete valik)
+                    tekst = `${andmed.test}, Variant: ${andmed.variant}, Valik: ${andmed.valik}, Valikute arv: ${andmed.valikuteArv}, Aeg: ${andmed.aeg}\n`;
+                } else {
+                    // Testi 1 andmed (klikkide test)
+                    tekst = `Variant: ${andmed.variant}, Klikkide arv: ${andmed.klikkideArv}, Aeg: ${andmed.aeg}\n`;
+                }
                 
                 // Lisa andmed faili (append)
                 fs.appendFileSync(RESULTS_FILE, tekst, 'utf8');

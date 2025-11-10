@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Test 2 - Variant B</title>
+    <link rel="stylesheet" href="test2-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toote Valiku Test - Variant B</h1>
+        <p>Vali üks allolevatest pakkumistest:</p>
+        
+        <div class="products-container">
+            <div class="product-card product-b" data-variant="B" data-choice="Pakett1">
+                <div class="product-header">
+                    <h2>Standard Pakett</h2>
+                    <div class="price">12,99 €<span class="period">/kuus</span></div>
+                </div>
+                <ul class="features">
+                    <li>15GB andmeid</li>
+                    <li>Piiramatud kõned</li>
+                    <li>Piiramatud sõnumid</li>
+                    <li>E-posti tugi</li>
+                </ul>
+                <button class="select-btn" data-variant="B" data-choice="Pakett1">Vali see pakett</button>
+            </div>
+            
+            <div class="product-card product-b" data-variant="B" data-choice="Pakett2">
+                <div class="product-header">
+                    <h2>Ultra Pakett</h2>
+                    <div class="price">24,99 €<span class="period">/kuus</span></div>
+                </div>
+                <ul class="features">
+                    <li>Piiramatud andmed</li>
+                    <li>Piiramatud kõned</li>
+                    <li>Piiramatud sõnumid</li>
+                    <li>Telefoni tugi</li>
+                    <li>Eksklusiivsed hüved</li>
+                    <li>Eelistatud klienditeenus</li>
+                </ul>
+                <button class="select-btn" data-variant="B" data-choice="Pakett2">Vali see pakett</button>
+            </div>
+        </div>
+        
+        <div id="selectionCount" class="selection-counter">
+            Valitud: <span id="count">0</span> korda
+        </div>
+        
+        <div class="info">
+            <p>Variant: <strong>B</strong></p>
+            <p>Valikute arv: <strong id="selections">0</strong></p>
+            <p>Viimane valik: <strong id="lastChoice">-</strong></p>
+        </div>
+        
+        <button id="backBtn" class="btn btn-secondary">Tagasi avalehele</button>
+    </div>
+    <script src="test2.js"></script>
+</body>
+</html>
+

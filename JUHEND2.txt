@@ -1,0 +1,327 @@
+================================================================================
+A/B TESTIMISE JUHEND 2 - TOOTE VALIKU TEST
+================================================================================
+
+1. MIS ON SEE TEST?
+================================================================================
+
+See on teine A/B test, mis erineb esimesest testist. Esimeses testis mõõtsime 
+klikkide arvu, aga siin testime, millist toodet või teenust kasutajad eelistavad.
+
+Testi põhimõte:
+- Kasutajad näevad kahte erinevat toote/teenuse pakkumist
+- Variant A: Põhipakett (9,99 €) vs Premium Pakett (19,99 €)
+- Variant B: Standard Pakett (12,99 €) vs Ultra Pakett (24,99 €)
+- Mõõdame, millist paketti valitakse rohkem
+- Salvestame iga valiku koos ajatempliga
+
+Miks on see test oluline?
+- See näitab, millised hinnad on kõige atraktiivsemad
+- See aitab mõista, millised funktsioonid on kasutajatele olulisemad
+- See võimaldab optimeerida toodete pakkumisi
+- See näitab, kuidas erinevad tekstid mõjutavad valikuid
+
+
+2. KUIDAS SEE TEST TÖÖTAB?
+================================================================================
+
+2.1. Testi struktuur
+
+1. Avaleht (test2-index.html) - testi alustamine
+2. Variant A (test2-a.html) - esimene toodete kombinatsioon
+3. Variant B (test2-b.html) - teine toodete kombinatsioon
+4. Andmete salvestamine - iga valik salvestatakse faili
+
+2.2. Variantide erinevused
+
+Variant A:
+- Põhipakett: 9,99 €/kuus (10GB, piiramatud kõned/sõnumid, 24/7 tugi)
+- Premium Pakett: 19,99 €/kuus (piiramatud andmed, eelistatud tugi, rohkem hüvesid)
+
+Variant B:
+- Standard Pakett: 12,99 €/kuus (15GB, piiramatud kõned/sõnumid, e-posti tugi)
+- Ultra Pakett: 24,99 €/kuus (piiramatud andmed, telefoni tugi, eksklusiivsed hüved)
+
+2.3. Andmete kogumine
+
+Iga valik salvestatakse järgmiste andmetega:
+- Milline variant oli kasutatud (A või B)
+- Milline pakett valiti (Pakett1 või Pakett2)
+- Mitu korda on valitud (valikute arv)
+- Millal valik tehti (ajatemper)
+
+2.4. Mõõdikud
+
+Selle testiga mõõdame:
+- Millist paketti valitakse rohkem (Pakett1 vs Pakett2)
+- Kas odavam või kallim pakett on populaarsem
+- Kas variantide A ja B vahel on erinevusi
+- Kui palju valikuid tehakse kokku
+
+
+3. KUIDAS SEDA PROJEKTI KASUTADA?
+================================================================================
+
+3.1. Projekti käivitamine
+
+1. Veendu, et server töötab (npm start)
+2. Ava brauseris aadress: http://localhost:3000/test2-index.html
+3. Või ava test2-index.html otse serverist
+
+3.2. Testi läbiviimine
+
+1. Kliki nuppu "Alusta testi 2"
+2. Näed üht varianti (A või B) - variant valitakse juhuslikult
+3. Vaata kahte toote/teenuse pakkumist
+4. Vali üks pakettidest (võid valida mitu korda)
+5. Iga valik salvestatakse automaatselt
+6. Vaata ekraanil valikute arvu ja viimast valikut
+7. Vajadusel kliki "Tagasi avalehele", et alustada uuesti
+
+3.3. Tulemuste vaatamine
+
+1. Lõpeta testi läbiviimine
+2. Vaata faili "testi-tulemused.txt"
+3. Failis on kõik salvestatud valikud koos ajatempliga
+4. Otsi ridu, kus on "Test2" - need on selle testi andmed
+5. Analüüsi andmeid (vt punkt 5)
+
+
+4. ÜLESANDED - 20 TOOTE VALIKU TESTI
+================================================================================
+
+4.1. Põhiülesanded (1-5)
+
+1. Käivita test 2 ja vali vähemalt 5 korda Pakett1 variantil A
+2. Puhasta brauseri andmed ja vali vähemalt 5 korda Pakett2 variantil B
+3. Võrdle tulemusi: millist paketti valiti rohkem?
+4. Mõtle, miks üks pakett võis olla populaarsem
+5. Kirjuta üles oma tähelepanekud
+
+4.2. Hindade testimine (6-10)
+
+6. Muuda variant A Põhipaketi hinda (nt 7,99 €)
+7. Muuda variant B Standard Paketi hinda (nt 14,99 €)
+8. Testi, kas hinna muutmine mõjutab valikuid
+9. Võrdle, kas odavam pakett muutus populaarsemaks
+10. Tee kokkuvõte hinna mõjust
+
+4.3. Funktsioonide testimine (11-15)
+
+11. Lisa variant A Põhipaketile uus funktsioon (nt "Tasuta kohaletoimetamine")
+12. Lisa variant B Standard Paketile uus funktsioon (nt "Eelistatud garantii")
+13. Testi, kas uued funktsioonid mõjutasid valikuid
+14. Mõtle, millised funktsioonid olid kõige atraktiivsemad
+15. Võrdle funktsioonide mõju
+
+4.4. Teksti testimine (16-20)
+
+16. Muuda variant A Premium Paketi nime (nt "Pro Pakett")
+17. Muuda variant B Ultra Paketi kirjeldust (nt lisa rohkem detaile)
+18. Testi, kas nime või kirjelduse muutmine mõjutab valikuid
+19. Mõtle, milline tekst oli selgem või atraktiivsem
+20. Tee lõplik analüüs tekstide testidest
+
+
+5. KUIDAS ANALÜÜSIDA TULEMUSI?
+================================================================================
+
+5.1. Andmete lugemine
+
+Failis "testi-tulemused.txt" on iga valik vormis:
+Test2, Variant: A, Valik: Pakett1, Valikute arv: 1, Aeg: 2024-01-15T10:30:00.000Z
+
+5.2. Pakettide võrdlus
+
+1. Loenda, mitu korda valiti Pakett1 variantil A
+2. Loenda, mitu korda valiti Pakett2 variantil A
+3. Loenda, mitu korda valiti Pakett1 variantil B
+4. Loenda, mitu korda valiti Pakett2 variantil B
+5. Arvuta protsentuaalne jaotus iga variandi kohta
+
+Näide arvutusest variantil A:
+- Pakett1: 15 valikut
+- Pakett2: 5 valikut
+- Kokku: 20 valikut
+- Pakett1: 15/20 = 75%
+- Pakett2: 5/20 = 25%
+
+5.3. Variantide võrdlus
+
+1. Võrdle, kas variant A või B sai rohkem valikuid kokku
+2. Võrdle, kas Pakett1 on populaarsem variantil A või B
+3. Võrdle, kas Pakett2 on populaarsem variantil A või B
+4. Määra, milline variant oli üldiselt edukam
+
+Näide:
+- Variant A kokku: 20 valikut (Pakett1: 15, Pakett2: 5)
+- Variant B kokku: 25 valikut (Pakett1: 10, Pakett2: 15)
+- Järeldus: Variant B sai rohkem valikuid, aga variantil A on Pakett1 populaarsem
+
+5.4. Hinna mõju analüüs
+
+1. Võrdle odavama paketi (Pakett1) valimise protsenti
+2. Võrdle kallima paketi (Pakett2) valimise protsenti
+3. Mõtle, kas hind mängib rolli valikutes
+4. Analüüsi, kas odavam pakett on alati populaarsem
+
+Näide:
+- Variant A: Pakett1 (9,99 €) - 75% valikutest
+- Variant B: Pakett1 (12,99 €) - 40% valikutest
+- Järeldus: Odavam pakett (9,99 €) on populaarsem kui kallim (12,99 €)
+
+5.5. Funktsioonide mõju analüüs
+
+1. Võrdle pakettide funktsioone
+2. Mõtle, millised funktsioonid võisid mõjutada valikuid
+3. Analüüsi, kas rohkem funktsioone tähendab rohkem valikuid
+4. Tee järeldused funktsioonide tähtsusest
+
+Näide:
+- Premium Pakett (19,99 €): piiramatud andmed, eelistatud tugi
+- Ultra Pakett (24,99 €): piiramatud andmed, telefoni tugi, eksklusiivsed hüved
+- Järeldus: Rohkem funktsioone ei pruugi tähendada rohkem valikuid, kui hind on liiga kõrge
+
+5.6. Järelduste tegemine
+
+1. Määra võitja: milline pakett sai rohkem valikuid?
+2. Määra võitja: milline variant oli edukam?
+3. Arvuta, kui suur on erinevus protsentides
+4. Mõtle, miks üks variant või pakett võis olla parem
+5. Kirjuta üles soovitused tulevikuks
+6. Tee kokkuvõte: mida õppisid?
+
+5.7. Soovitused
+
+1. Kui odavam pakett on populaarsem, siis võib-olla hind on liiga kõrge
+2. Kui kallim pakett on populaarsem, siis võib-olla funktsioonid on väärtuslikud
+3. Kui valikud on võrdsed, siis võib-olla pakettide vahel pole piisavat erinevust
+4. Kasuta tulemusi, et parandada toodete pakkumisi
+5. Testi uusi ideid pidevalt
+
+
+6. NÄITEID ANALÜÜSIST
+================================================================================
+
+Näide 1: Odavama paketi eelistus
+
+Testi tulemused variantil A:
+- Pakett1 (9,99 €): 18 valikut
+- Pakett2 (19,99 €): 2 valikut
+- Kokku: 20 valikut
+
+Arvutus:
+- Pakett1: 18/20 = 90%
+- Pakett2: 2/20 = 10%
+- Erinevus: 80%
+
+Järeldus: Odavam pakett (9,99 €) on väga populaarne. Kasutajad eelistavad odavamat 
+võimalust. Soovitame hoida odavamat paketti või muuta kallimat paketti atraktiivsemaks.
+
+Näide 2: Tasakaalustatud valikud
+
+Testi tulemused variantil B:
+- Pakett1 (12,99 €): 12 valikut
+- Pakett2 (24,99 €): 13 valikut
+- Kokku: 25 valikut
+
+Arvutus:
+- Pakett1: 12/25 = 48%
+- Pakett2: 13/25 = 52%
+- Erinevus: 4%
+
+Järeldus: Valikud on tasakaalustatud. See võib tähendada, et mõlemad paketid on 
+hea väärtusega. Soovitame säilitada mõlemad paketid või muuta neid, et teha erinevus 
+selgemaks.
+
+Näide 3: Kallima paketi eelistus
+
+Testi tulemused variantil A:
+- Pakett1 (9,99 €): 5 valikut
+- Pakett2 (19,99 €): 15 valikut
+- Kokku: 20 valikut
+
+Arvutus:
+- Pakett1: 5/20 = 25%
+- Pakett2: 15/20 = 75%
+- Erinevus: 50%
+
+Järeldus: Kallim pakett (19,99 €) on populaarsem. See võib tähendada, et funktsioonid 
+on väärtuslikud või hind on õige. Soovitame rõhutada kallima paketi eeliseid või 
+koguda rohkem andmeid, et veenduda tulemuses.
+
+
+7. KASULIKUD NIPID
+================================================================================
+
+1. Alati koguge piisavalt andmeid (vähemalt 30-50 valikut)
+2. Testige ühte asja korraga (nt ainult hinda või ainult funktsioone)
+3. Jätke test piisavalt kauaks tööle (vähemalt mitu päeva)
+4. Dokumenteerige kõik muudatused, mida teete
+5. Võrdlege tulemusi erinevate testide vahel
+6. Ärge tehke kiireid järeldusi - oodake, kuni on piisavalt andmeid
+7. Mõelge, miks üks pakett võis olla populaarsem (mitte ainult "see on parem")
+8. Kasutage tulemusi, et parandada toodete pakkumisi
+9. Testige uusi ideid pidevalt
+10. Õppige oma vigadest ja parandage neid
+11. Võrdlege oma tulemusi esimese testi tulemustega
+12. Mõelge, kuidas erinevad testid (klikkide test vs toodete test) võivad erineda
+
+
+8. ERINEVUSED ESIMESE TESTIGA
+================================================================================
+
+Esimene test (klikkide test):
+- Mõõdab klikkide arvu
+- Testib nuppude disaini
+- Lihtsam analüüsida
+- Kiirem tulemuste saamine
+
+Teine test (toodete test):
+- Mõõdab valikute tegemist
+- Testib toodete pakkumisi
+- Keerukam analüüsida
+- Nõuab rohkem mõtlemist
+
+Mõlemad testid on olulised:
+- Esimene test näitab, kas disain on atraktiivne
+- Teine test näitab, kas pakkumine on väärtuslik
+- Koos annavad need pildi kasutajate käitumisest
+- Mõlemad aitavad parandada veebilehte või rakendust
+
+
+9. KOKKUVÕTE
+================================================================================
+
+See test on täiendus esimesele testile. See näitab, kuidas A/B testida saab 
+mitmesuguseid aspekte:
+- Nuppude disaini
+- Toodete pakkumisi
+- Hinnastrateegiaid
+- Funktsioonide tähtsust
+
+Pidage meeles:
+- Testige ühte asja korraga
+- Koguge piisavalt andmeid
+- Analüüsige tulemusi hoolikalt
+- Kasutage tulemusi, et teha parandusi
+- Õppige pidevalt ja arendage end
+- Võrdlege erinevaid teste omavahel
+
+Head testi!
+
+================================================================================
+LISATEAVE
+================================================================================
+
+Kui teil on küsimusi või probleeme:
+1. Vaadake README.md faili
+2. Kontrollige, kas server töötab
+3. Vaadake brauseri konsooli vigu
+4. Kontrollige, kas andmed salvestuvad faili
+5. Veenduge, et kasutate õiget testi (test2-index.html)
+
+Projekt on mõeldud õppimiseks - katsetage ja arendage edasi!
+
+================================================================================
+
