@@ -1,0 +1,153 @@
+/* Põhistiilid */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Nupud */
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-variant-a {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    font-size: 18px;
+    padding: 15px 40px;
+}
+
+.btn-variant-a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.btn-variant-b {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    font-size: 18px;
+    padding: 15px 40px;
+}
+
+.btn-variant-b:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Testi ala */
+.test-area {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.click-counter {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.click-counter span {
+    color: #667eea;
+    font-size: 24px;
+}
+
+.info {
+    margin: 20px 0;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.info p {
+    margin: 8px 0;
+    color: #495057;
+}
+
+.info strong {
+    color: #212529;
+}
+
+/* Animatsioon klikkimisele */
+.btn:active {
+    transform: scale(0.98);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn.clicked {
+    animation: pulse 0.3s ease;
+}
+

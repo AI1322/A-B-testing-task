@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Test - Variant A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Variant A - Test</h1>
+        <p>See on testi variant A. Proovi klikkida allolevat nuppu!</p>
+        <div class="test-area">
+            <button id="testButton" class="btn btn-variant-a" data-variant="A">
+                Kliki siia (Variant A)
+            </button>
+        </div>
+        <div id="clickCount" class="click-counter">
+            Klõpsatud: <span id="count">0</span> korda
+        </div>
+        <div class="info">
+            <p>Variant: <strong>A</strong></p>
+            <p>Klikkide arv: <strong id="clicks">0</strong></p>
+        </div>
+        <button id="backBtn" class="btn btn-secondary">Tagasi avalehele</button>
+    </div>
+    <script src="ab-test.js"></script>
+</body>
+</html>
+

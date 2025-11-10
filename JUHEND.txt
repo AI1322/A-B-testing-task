@@ -1,0 +1,305 @@
+================================================================================
+A/B TESTIMISE JUHEND - ÕPILASTELE
+================================================================================
+
+1. MIS ON A/B TESTIMINE?
+================================================================================
+
+A/B testimine on meetod, kus võrreldakse kahte erinevat veebilehe või rakenduse 
+versiooni, et välja selgitada, milline neist on efektiivsem.
+
+Näiteks:
+- Variant A: roosa nupp tekstiga "Kliki siia"
+- Variant B: sinine nupp tekstiga "Kliki siia"
+
+Mõlemad variandid on näidatud erinevatele kasutajatele ja mõõdetakse, milline 
+variant saab rohkem klõpse või teisi soovitud tegevusi.
+
+Miks on A/B testimine kasulik?
+- See võimaldab teha otsuseid andmete põhjal, mitte arvamuste põhjal
+- See aitab parandada veebilehe kasutajakogemust
+- See võimaldab testida erinevaid ideid ja näha, mis tegelikult töötab
+
+
+2. KUIDAS A/B TESTIMINE TÖÖTAB?
+================================================================================
+
+2.1. Testi ettevalmistamine
+
+1. Vali, mida soovid testida (nt nupu värv, tekst, asukoht)
+2. Loo kaks varianti: A ja B
+3. Määra, mida mõõdad (nt klikkide arv, aeg lehel veedetud)
+4. Vali testi kestus (nt 1 nädal, 1000 külastajat)
+
+2.2. Testi käivitamine
+
+1. Kasutajad suunatakse juhuslikult kas variantile A või B
+2. Iga kasutaja näeb alati sama varianti (variant ei muutu)
+3. Kõik kasutajate tegevused salvestatakse
+4. Andmed kogutakse automaatselt
+
+2.3. Andmete kogumine
+
+Iga klikk või tegevus salvestatakse järgmiste andmetega:
+- Milline variant oli kasutatud (A või B)
+- Mitu korda klikiti
+- Millal tegevus toimus
+- Kasutaja käitumine
+
+2.4. Tulemuste analüüsimine
+
+1. Vaata, milline variant sai rohkem klõpse
+2. Arvuta protsentuaalne erinevus
+3. Otsusta, kas erinevus on piisavalt suur
+4. Järgmisel korral kasuta võitvat varianti
+
+
+3. KUIDAS SEDA PROJEKTI KASUTADA?
+================================================================================
+
+3.1. Projekti käivitamine
+
+1. Ava terminal või käsurida
+2. Mine projektikausta
+3. Käivita käsk: npm start
+4. Oota, kuni näed teadet "Server töötab aadressil http://localhost:3000"
+5. Ava brauseris aadress: http://localhost:3000
+
+3.2. Testi läbiviimine
+
+1. Kliki nuppu "Alusta testi"
+2. Näed üht varianti (A või B) - variant valitakse juhuslikult
+3. Kliki testnuppu mitu korda
+4. Iga klikk salvestatakse automaatselt
+5. Vaata ekraanil klikkide arvu
+6. Vajadusel kliki "Tagasi avalehele", et alustada uuesti
+
+3.3. Tulemuste vaatamine
+
+1. Lõpeta testi läbiviimine
+2. Vaata faili "testi-tulemused.txt"
+3. Failis on kõik salvestatud klikid koos ajatempliga
+4. Analüüsi andmeid (vt punkt 5)
+
+
+4. ÜLESANDED - 25 A/B TESTI
+================================================================================
+
+4.1. Põhiülesanded (1-5)
+
+1. Käivita projekt ja tee vähemalt 10 klikki variantile A
+2. Puhasta brauseri andmed (localStorage) ja tee vähemalt 10 klikki variantile B
+3. Võrdle tulemusi: milline variant sai rohkem klõpse?
+4. Mõtle, miks üks variant võis olla edukam kui teine
+5. Kirjuta üles oma tähelepanekud
+
+4.2. Disaini testimine (6-10)
+
+6. Muuda variant A nupu värv teiseks värviks (nt roheline)
+7. Muuda variant B nupu suurust (nt suurem)
+8. Testi, kas värv muutmine mõjutab klikkide arvu
+9. Testi, kas nupu suurus mõjutab klikkide arvu
+10. Võrdle tulemusi algse testiga
+
+4.3. Teksti testimine (11-15)
+
+11. Muuda variant A nupu teksti (nt "Vajuta siia")
+12. Muuda variant B nupu teksti (nt "Alusta nüüd")
+13. Testi, kas tekst muutmine mõjutab klikkide arvu
+14. Mõtle, milline tekst oli selgem või atraktiivsem
+15. Tee kokkuvõte tekstide testidest
+
+4.4. Asukoha testimine (16-20)
+
+16. Muuda variant A nupu asukohta lehel (nt vasakule)
+17. Muuda variant B nupu asukohta lehel (nt paremale)
+18. Testi, kas asukoht mõjutab klikkide arvu
+19. Mõtle, miks üks asukoht võis olla parem
+20. Võrdle erinevaid asukohti
+
+4.5. Kombineeritud testid (21-25)
+
+21. Loo uus variant C, mis kombineerib A ja B parimad omadused
+22. Testi varianti C variantide A ja B vastu
+23. Mõõda mitte ainult klikke, vaid ka aega lehel veedetud
+24. Kogude andmeid vähemalt 50 klõpsu kohta
+25. Tee lõplik analüüs ja otsusta võitja
+
+
+5. KUIDAS ANALÜÜSIDA TULEMUSI?
+================================================================================
+
+5.1. Andmete lugemine
+
+Failis "testi-tulemused.txt" on iga klikk vormis:
+Variant: A, Klikkide arv: 5, Aeg: 2024-01-15T10:30:00.000Z
+
+5.2. Põhiandmete kokkuvõte
+
+1. Loenda, mitu klikki on variandil A kokku
+2. Loenda, mitu klikki on variandil B kokku
+3. Arvuta kokku kõikide klikkide arv
+4. Leia protsentuaalne jaotus (nt A: 60%, B: 40%)
+
+Näide arvutusest:
+- Variant A: 30 klikki
+- Variant B: 20 klikki
+- Kokku: 50 klikki
+- Variant A: 30/50 = 60%
+- Variant B: 20/50 = 40%
+
+5.3. Keskmiste väärtuste arvutamine
+
+1. Leia keskmine klikkide arv variandil A
+2. Leia keskmine klikkide arv variandil B
+3. Võrdle keskmisi väärtusi
+4. Määra, milline variant on parem
+
+Näide:
+- Variant A keskmine: 3 klikki kasutaja kohta
+- Variant B keskmine: 2 klikki kasutaja kohta
+- Järeldus: Variant A on 50% efektiivsem
+
+5.4. Ajalise analüüsi tegemine
+
+1. Vaata, millal toimusid kõige rohkemad klikid
+2. Analüüsi, kas on mingeid mustreid (nt päeval rohkem kui öösel)
+3. Võrdle variantide A ja B ajaliset jaotust
+4. Mõtle, miks võisid olla ajaliselt erinevad mustrid
+
+5.5. Järelduste tegemine
+
+1. Määra võitja: milline variant sai rohkem klõpse?
+2. Arvuta, kui suur on erinevus protsentides
+3. Mõtle, kas erinevus on piisavalt suur, et otsustada
+4. Kirjuta üles soovitused tulevikuks
+5. Tee kokkuvõte: mida õppisid?
+
+5.6. Statistikaline olulisus
+
+Lihtne kontroll:
+- Kas testis osales piisavalt inimesi? (soovitavalt vähemalt 20-30)
+- Kas erinevus on märkimisväärne? (nt rohkem kui 10% erinevus)
+- Kas tulemus on korratav? (tee test uuesti, kas tulemus on sama?)
+
+Kui variant A on 55% ja variant B on 45%, siis:
+- Erinevus on 10%
+- See võib olla märkimisväärne, kui testis osales palju inimesi
+- Soovitav on teha test uuesti, et veenduda tulemuses
+
+5.7. Praktiline analüüsivormel
+
+1. Kogude andmeid vähemalt 50 klõpsu kohta
+2. Arvuta protsentuaalne erinevus
+3. Kui erinevus on väiksem kui 5%, siis erinevus võib olla juhuslik
+4. Kui erinevus on suurem kui 10%, siis on üks variant selgelt parem
+5. Kui erinevus on 5-10% vahel, siis tee test uuesti, et veenduda
+
+5.8. Tulemuste esitamine
+
+1. Loo tabel või graafik tulemuste kuvamiseks
+2. Kirjuta lühike kokkuvõte (2-3 lauset)
+3. Too välja peamised tähelepanekud
+4. Anna soovitused, mida edasi teha
+5. Arutle, miks üks variant võis olla parem
+
+
+6. NÄITEID ANALÜÜSIST
+================================================================================
+
+Näide 1: Lihtne võrdlus
+
+Testi tulemused:
+- Variant A: 45 klikki
+- Variant B: 35 klikki
+- Kokku: 80 klikki
+
+Arvutus:
+- Variant A: 45/80 = 56.25%
+- Variant B: 35/80 = 43.75%
+- Erinevus: 12.5%
+
+Järeldus: Variant A on 12.5% efektiivsem kui variant B. See on märkimisväärne 
+erinevus, seega soovitame kasutada varianti A.
+
+Näide 2: Väike erinevus
+
+Testi tulemused:
+- Variant A: 42 klikki
+- Variant B: 38 klikki
+- Kokku: 80 klikki
+
+Arvutus:
+- Variant A: 42/80 = 52.5%
+- Variant B: 38/80 = 47.5%
+- Erinevus: 5%
+
+Järeldus: Erinevus on väike (5%). See võib olla juhuslik. Soovitame teha test 
+uuesti või koguda rohkem andmeid, et veenduda tulemuses.
+
+Näide 3: Suur erinevus
+
+Testi tulemused:
+- Variant A: 60 klikki
+- Variant B: 20 klikki
+- Kokku: 80 klikki
+
+Arvutus:
+- Variant A: 60/80 = 75%
+- Variant B: 20/80 = 25%
+- Erinevus: 50%
+
+Järeldus: Variant A on 50% efektiivsem kui variant B. See on väga märkimisväärne 
+erinevus. Soovitame kindlasti kasutada varianti A edaspidi.
+
+
+7. KASULIKUD NIPID
+================================================================================
+
+1. Alati koguge piisavalt andmeid (vähemalt 50-100 klikki)
+2. Testige ühte asja korraga (nt ainult värv või ainult tekst)
+3. Jätke test piisavalt kauaks tööle (vähemalt mitu päeva)
+4. Dokumenteerige kõik muudatused, mida teete
+5. Võrdlege tulemusi erinevate testide vahel
+6. Ärge tehke kiireid järeldusi - oodake, kuni on piisavalt andmeid
+7. Mõelge, miks üks variant võis olla parem (mitte ainult "see on parem")
+8. Kasutage tulemusi, et parandada veebilehte
+9. Testige uusi ideid pidevalt
+10. Õppige oma vigadest ja parandage neid
+
+
+8. KOKKUVÕTE
+================================================================================
+
+A/B testimine on võimas tööriist, mis võimaldab teha otsuseid andmete põhjal. 
+Selle projekti abil saate:
+
+- Õppida, kuidas A/B testid töötavad
+- Testida erinevaid ideid
+- Koguda ja analüüsida andmeid
+- Teha järeldusi tulemuste põhjal
+- Parandada veebilehte või rakendust
+
+Pidage meeles:
+- Testige ühte asja korraga
+- Koguge piisavalt andmeid
+- Analüüsige tulemusi hoolikalt
+- Kasutage tulemusi, et teha parandusi
+- Õppige pidevalt ja arendage end
+
+Head testi!
+
+================================================================================
+LISATEAVE
+================================================================================
+
+Kui teil on küsimusi või probleeme:
+1. Vaadake README.md faili
+2. Kontrollige, kas server töötab
+3. Vaadake brauseri konsooli vigu
+4. Kontrollige, kas andmed salvestuvad faili
+
+Projekt on mõeldud õppimiseks - katsetage ja arendage edasi!
+
+================================================================================
+

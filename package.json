@@ -1,0 +1,19 @@
+{
+  "name": "ab-testing-project",
+  "version": "1.0.0",
+  "description": "Lihtne A/B testi projekt õpilastele",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "ab-testing",
+    "education",
+    "students"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
+
